@@ -1,9 +1,12 @@
+import home from "../images/home.svg"
+
 function Home() {
   return (
-    <>
-      <h2>หน้าแรกของเวปไซต์</h2>
-    </>
-  )
+    <div className="container">
+      <h2 className="title">หน้าแรกของเว็บไซต์</h2>
+      <img src={home} alt="home"/>
+    </div>
+  );
 }
 
 export default Home;
