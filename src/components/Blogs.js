@@ -1,8 +1,19 @@
+import "./Blogs.css"
+import blogs from "../data/blogs";
 function Blogs() {
+  
   return (
-    <>
-      <h2>บทความทั้งหมด</h2>
-    </>
+    <div className="blogs-container">
+      <article>
+        {blogs.map((item) => (
+          <div className="card" key={item.id}>
+            <h2>{item.title}</h2>
+            <p>{item.content.substring(0,300)}</p>
+            <hr/>
+          </div>
+        ))}
+      </article>
+    </div>
   );
 }
 
